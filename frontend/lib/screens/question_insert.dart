@@ -346,7 +346,7 @@ class _QuestionInsertState extends State<QuestionInsert> {
                       ),
                       SizedBox(height: 24),
                       Text(
-                        '자기소개서 문항은 최대 5개까지 입력이 가능하며,\n1000자 이내로 답변을 해줍니다.',
+                        '자기소개서 문항은 최대 3개까지 입력이 가능하며,\n1000자 이내로 답변을 해줍니다.',
                         style: TextStyle(
                             fontSize: 14,
                             color: Color(0xff555555),
@@ -398,7 +398,7 @@ class _QuestionInsertState extends State<QuestionInsert> {
                     );
                   },
                 ),
-                if (questionControllers.length < 5)
+                if (questionControllers.length < 3)
                   Padding(
                     padding: const EdgeInsets.only(top: 24),
                     child: TextButton.icon(
