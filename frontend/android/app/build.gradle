@@ -58,6 +58,15 @@ android {
             signingConfig signingConfigs.debug
         }
     }
+
+    applicationVariants.all { variant ->
+        if (variant.buildType.name == "release") {
+            variant.outputs.all { output ->
+                def apkName = "MyLio.apk"
+                outputFileName = apkName
+            }
+        }
+    }
 }
 
 flutter {
